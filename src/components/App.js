@@ -8,9 +8,9 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row text-center">
-          <div class="jumbotron">
-            <h1 class="display-4">Movies Db</h1>
-            <p class="lead">Who doesn't love movies?</p>
+          <div className="jumbotron">
+            <h1 className="display-4">Movies Db</h1>
+            <p className="lead">Who doesn't love movies?</p>
           </div>
         </div>
         <div className="row">
