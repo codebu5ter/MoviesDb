@@ -6,7 +6,35 @@ const urlComponent = "https://image.tmdb.org/t/p/w342";
 const movieUrl = "https://www.themoviedb.org/movie/";
 
 class MovieItem extends Component {
+	constructor(props) {
+	  super(props);
 
+	  this.state = {
+	  	favorited: false
+	  };
+	}
+
+	addToFavorite() {
+		this.setState({favorited: !this.state.favorited});
+		this.props.addToFavorite(this.props.movie);
+	}
+
+	removeFromFavorite() {
+		this.setState({favorited: !this.state.favorited});
+		this.props.removeFromFavorite(this.props.movie);
+	}
+
+	displayFav() {
+		if(!this.state.favorited) {
+			return <span className="glyphicon glyphicon-heart-empty"
+				onClick={()=>this.addToFavorite()}
+			></span>
+		} else {
+			return <span className="glyphicon glyphicon-heart"
+				onClick={()=>this.removeFromFavorite()}
+				></span>
+		}
+	}
 	render(){
 		return(
 		  <div className="col-sm-12 col-sm-3">
