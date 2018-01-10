@@ -1,4 +1,5 @@
 export const MOVIES = "MOVIES";
+export const ADD_FAV = "ADD_FAV";
 
 export function movies(items) {
   const action = {
@@ -6,4 +7,11 @@ export function movies(items) {
     items
   }
   return action;
+}
+
+export function addToFavorite(movie) {
+  return {
+    type: ADD_FAV,
+    movie
+  }
 }
