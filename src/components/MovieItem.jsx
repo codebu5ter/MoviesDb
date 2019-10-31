@@ -13,17 +13,18 @@ class MovieItem extends Component {
 	  	favorited: false
 	  };
 	}
-
+	// This funtion is there to adds favorite movie of the user
 	addToFavorite() {
 		this.setState({favorited: !this.state.favorited});
 		this.props.addToFavorite(this.props.movie);
 	}
-
+	// This funtion is there to remove a favorite movie of the user
 	removeFromFavorite() {
 		this.setState({favorited: !this.state.favorited});
 		this.props.removeFromFavorite(this.props.movie);
 	}
 
+	//This function is there to display fav movies of the user
 	displayFav() {
 		if(!this.state.favorited) {
 			return <span className="glyphicon glyphicon-heart-empty"
