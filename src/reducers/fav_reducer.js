@@ -1,5 +1,4 @@
-import { ADD_FAV, REMOVE_FAV } from '../actions';
-
+import {ADD_FAV,REMOVE_FAV} from '../constants'
 function addToFavorite(state = [], action) {
   switch(action.type) {
     case ADD_FAV:

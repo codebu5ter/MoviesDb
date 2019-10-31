@@ -1,4 +1,4 @@
-import { MOVIES } from '../actions';
+import { MOVIES } from '../constants';
 
 export default function movies(state = [], action) {
   switch(action.type) {
